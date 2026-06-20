@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dua Mahasiswa TRIK SV UGM Presentasikan Hasil PBL di SIML International Conference 2026 &#8211; Menara Ilmu Otomasi SV UGM</title>
+<style>
+  :root{
+    --brand-dark:#073C64;
+    --brand-darker:#1A2C43;
+    --brand-navy:#121F33;
+    --brand-yellow:#FDCB2C;
+    --brand-link:#149fc0;
+    --text-body:#3a4452;
+    --text-muted:#7c8896;
+    --line:#e6e9ec;
+    --bg:#f4f5f7;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text-body);
+    font-family:"Open Sans","Segoe UI",Arial,sans-serif;
+    line-height:1.7;
+    font-size:15px;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+  a{color:var(--brand-link); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  /* ===== Top bar ===== */
+  .topbar{
+    background:var(--brand-darker);
+    color:#dfe6ec;
+    font-size:0.78rem;
+  }
+  .topbar .inner{
+    max-width:1140px;
+    margin:0 auto;
+    padding:7px 20px;
+    display:flex;
+    gap:22px;
+    flex-wrap:wrap;
+  }
+  .topbar a{color:#cfd9e1; font-weight:600;}
+  .topbar a:hover{color:#fff;}
+
+  /* ===== Header / navbar brand ===== */
+  header#header{
+    background:var(--brand-dark);
+  }
+  .navbar-header{
+    max-width:1140px;
+    margin:0 auto;
+    padding:18px 20px 14px;
+    display:flex;
+    align-items:center;
+    gap:16px;
+  }
+  .navbar-header img{height:46px; width:auto;}
+  .navbar-header .brand-text{
+    color:#fff;
+    font-family:"Montserrat",sans-serif;
+    font-size:0.82rem;
+    line-height:1.45;
+  }
+  .navbar-header .brand-text b{font-weight:700; display:block; font-size:0.9rem;}
+
+  nav#navbar{
+    background:var(--brand-navy);
+  }
+  nav#navbar .inner{
+    max-width:1140px;
+    margin:0 auto;
+    padding:0 20px;
+    display:flex;
+    gap:4px;
+    flex-wrap:wrap;
+  }
+  nav#navbar a{
+    display:inline-block;
+    padding:13px 14px;
+    color:#fff;
+    font-size:0.85rem;
+    font-weight:600;
+    font-family:"Montserrat",sans-serif;
+  }
+  nav#navbar a.current{
+    color:var(--brand-yellow);
+  }
+  nav#navbar a:hover{
+    background:rgba(255,255,255,0.06);
+    color:var(--brand-yellow);
+    text-decoration:none;
+  }
+
+  /* ===== Body layout ===== */
+  #body{
+    max-width:1140px;
+    margin:0 auto;
+    padding:26px 20px 60px;
+  }
+  .row{display:flex; gap:34px; flex-wrap:wrap;}
+  #content{flex:1 1 0; min-width:0;}
+  #sidebar{flex:0 0 300px;}
+
+  .breadcrumb{
+    list-style:none;
+    display:flex;
+    gap:6px;
+    flex-wrap:wrap;
+    padding:0;
+    margin:0 0 18px;
+    font-size:0.82rem;
+    color:var(--text-muted);
+  }
+  .breadcrumb li:not(:last-child)::after{content:"/"; margin-left:6px; color:#c2c9d0;}
+  .breadcrumb li.active{color:var(--brand-dark); font-weight:600;}
+
+  article.single-post{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:28px 30px 34px;
+  }
+
+  .post-title{
+    font-family:"Lora",serif;
+    font-weight:700;
+    font-size:1.62rem;
+    line-height:1.32;
+    color:#1b2733;
+    margin:0 0 14px;
+  }
+
+  ul.entry-meta{
+    list-style:none;
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+    padding:0;
+    margin:0 0 22px;
+    font-size:0.8rem;
+    color:var(--text-muted);
+    border-bottom:1px solid var(--line);
+    padding-bottom:18px;
+  }
+  ul.entry-meta a{color:var(--brand-link); font-weight:600;}
+  ul.entry-meta li.post-category a{
+    background:var(--brand-dark);
+    color:#fff;
+    padding:3px 10px;
+    border-radius:3px;
+    font-weight:600;
+  }
+
+  .post-content img.wp-post-image{
+    width:100%;
+    max-width:100%;
+    height:auto;
+    border-radius:3px;
+    display:block;
+    margin-bottom:6px;
+  }
+  .img-caption{
+    font-size:0.8rem;
+    color:var(--text-muted);
+    font-style:italic;
+    margin:0 0 22px;
+    padding-left:12px;
+    border-left:3px solid var(--brand-yellow);
+  }
+
+  .post-content p{
+    font-size:0.97rem;
+    color:#37414c;
+    margin:0 0 18px;
+  }
+  .post-content em{color:#1b2733;}
+
+  .paper-box{
+    background:#f7f9fb;
+    border:1px solid var(--line);
+    border-left:4px solid var(--brand-dark);
+    border-radius:3px;
+    padding:16px 20px;
+    margin:0 0 18px;
+  }
+  .paper-box .label{
+    display:block;
+    font-size:0.7rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--brand-dark);
+    font-weight:700;
+    margin-bottom:6px;
+  }
+  .paper-box .title{
+    font-family:"Lora",serif;
+    font-style:italic;
+    font-weight:700;
+    font-size:1rem;
+    color:#1b2733;
+    margin:0 0 8px;
+  }
+  .paper-box p{margin:0; font-size:0.9rem;}
+
+  .info-table{
+    width:100%;
+    border-collapse:collapse;
+    margin:0 0 22px;
+    font-size:0.9rem;
+  }
+  .info-table td{
+    padding:8px 10px;
+    border:1px solid var(--line);
+    vertical-align:top;
+  }
+  .info-table td:first-child{
+    width:190px;
+    background:#f7f9fb;
+    font-weight:700;
+    color:var(--brand-dark);
+  }
+
+  .tagcloud{
+    margin-top:22px;
+    padding-top:18px;
+    border-top:1px solid var(--line);
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    align-items:center;
+  }
+  .tagcloud .tag-title{font-weight:700; font-size:0.85rem; color:#1b2733; margin-right:4px;}
+  .tagcloud a{
+    background:var(--brand-dark);
+    color:#fff;
+    font-size:0.78rem;
+    padding:5px 12px;
+    border-radius:30px;
+    font-weight:600;
+  }
+  .tagcloud a:hover{background:var(--brand-yellow); color:#1b2733; text-decoration:none;}
+
+  .share-box{
+    list-style:none;
+    display:flex;
+    gap:10px;
+    padding:0;
+    margin:22px 0 0;
+  }
+  .share-box a{
+    width:34px; height:34px;
+    border-radius:50%;
+    background:#f1f3f5;
+    color:var(--brand-dark);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:0.85rem;
+    font-weight:700;
+  }
+  .share-box a:hover{background:var(--brand-dark); color:#fff; text-decoration:none;}
+
+  /* ===== Sidebar ===== */
+  .widget{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:4px;
+    margin-bottom:22px;
+    overflow:hidden;
+  }
+  .widget-header{
+    background:var(--brand-dark);
+    padding:11px 16px;
+  }
+  .widget-header h2{
+    margin:0;
+    color:#fff;
+    font-size:0.85rem;
+    font-family:"Montserrat",sans-serif;
+    font-weight:700;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+  }
+  .widget .post-list, .widget ul{
+    list-style:none;
+    margin:0; padding:0;
+  }
+  .widget .post-list li{
+    padding:12px 16px;
+    border-bottom:1px solid var(--line);
+    font-size:0.84rem;
+  }
+  .widget .post-list li:last-child{border-bottom:none;}
+  .widget .post-list a{color:#33424f; font-weight:600;}
+  .widget .post-list a:hover{color:var(--brand-link);}
+
+  .org-card{
+    padding:16px;
+    font-size:0.84rem;
+  }
+  .org-card div{margin-bottom:6px;}
+  .org-card .org-name{font-weight:700; color:var(--brand-dark);}
+
+  /* ===== Footer ===== */
+  footer#footer{
+    background:var(--brand-darker);
+    color:#cfd9e1;
+    margin-top:10px;
+  }
+  .footer-body{padding:34px 0;}
+  .footer-body .inner{
+    max-width:1140px;
+    margin:0 auto;
+    padding:0 20px;
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+  }
+  .footer-brand img{height:42px; margin-bottom:14px;}
+  .footer-body p{font-size:0.82rem; margin:0 0 10px; color:#aebdc9;}
+  .footer-body a{color:#fff;}
+  .footer-copyright{
+    background:var(--brand-navy);
+    padding:14px 0;
+  }
+  .footer-copyright .inner{
+    max-width:1140px;
+    margin:0 auto;
+    padding:0 20px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+    font-size:0.78rem;
+    color:#9aa9b6;
+  }
+  .footer-copyright a{color:#9aa9b6;}
+
+  @media (max-width:860px){
+    .row{flex-direction:column;}
+    #sidebar{flex:1 1 auto;}
+    article.single-post{padding:20px;}
+    .post-title{font-size:1.32rem;}
+  }
+  @media (max-width:500px){
+    .navbar-header{flex-wrap:wrap;}
+    nav#navbar a{padding:10px 11px; font-size:0.78rem;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="inner">
+      <a href="#">Tentang UGM</a>
+      <a href="#">Sekolah Vokasi</a>
+      <a href="#">Departemen Elektro &amp; Informatika</a>
+    </div>
+  </div>
+
+  <header id="header">
+    <div class="navbar-header">
+      <img src="https://otomasi.sv.ugm.ac.id/wp-content/themes/ugm-theme-dti/assets/images/ugm_logo.png" alt="Universitas Gadjah Mada">
+      <div class="brand-text">
+        <b>Menara Ilmu Otomasi</b>
+        Departemen Teknik Elektro dan Informatika<br>
+        Sekolah Vokasi Universitas Gadjah Mada
+      </div>
+    </div>
+    <nav id="navbar">
+      <div class="inner">
+        <a href="#">Beranda</a>
+        <a href="#">Penelitian</a>
+        <a href="#" class="current">Berita</a>
+        <a href="#">Artikel</a>
+        <a href="#">Buku</a>
+        <a href="#">Video</a>
+        <a href="#">Tentang</a>
+      </div>
+    </nav>
+  </header>
+
+  <div id="body">
+    <div class="row">
+
+      <div id="content">
+
+        <ul class="breadcrumb">
+          <li><a href="#">Beranda</a></li>
+          <li><a href="#">Berita</a></li>
+          <li class="active">SIML International Conference 2026</li>
+        </ul>
+
+        <article class="single-post">
+          <h1 class="post-title">Dua Mahasiswa Teknologi Rekayasa Instrumentasi dan Kontrol SV UGM Presentasikan Hasil PBL di SIML International Conference 2026</h1>
+
+          <ul class="entry-meta">
+            <li class="post-category"><a href="#">Berita</a></li>
+            <li class="post-date">20 Juni 2026, 16.00</li>
+            <li class="post-author">Oleh: Tim Berita Departemen Elektro dan Informatika</li>
+            <li class="post-comments">0 Komentar</li>
+          </ul>
+
+          <div class="post-content">
+
+            <img class="wp-post-image" src="dokumentasi.png" alt="Markus Adytama Wisnumaya Nugraha Jati dan Falda Nurrayan Alvis Prabowo di SIML International Conference 2026">
+            <p class="img-caption">Markus Adytama Wisnumaya Nugraha Jati (kiri) dan Falda Nurrayan Alvis Prabowo (kanan) berfoto bersama identity card peserta di hadapan backdrop SIML International Conference 2026.</p>
+
+            <p>Sabtu 20 Juni 2026 dua mahasiswa Program Studi Sarjana Terapan Teknologi Rekayasa Instrumentasi dan Kontrol (TRIK), Departemen Teknik Elektro dan Informatika, Sekolah Vokasi Universitas Gadjah Mada (SV UGM), yaitu <strong>Markus Adytama Wisnumaya Nugraha Jati</strong> (24/545159/SV/25614) dan <strong>Falda Nurrayan Alvis Prabowo</strong> (24/545304/SV/25653), berkesempatan mempresentasikan hasil karyanya pada <em>International Conference on Smart Computing, IoT, and Machine Learning</em> (SIML) 2026 yang diselenggarakan di Edutorium UMS, Surakarta.</p>
+
+            <p>Konferensi internasional ini disponsori secara teknis oleh IEEE dan diselenggarakan oleh Universitas Muhammadiyah Surakarta (UMS) selaku tuan rumah. SIML 2026 terdaftar dalam IEEE Conference Publication Program dan menjadi forum bagi akademisi, peneliti, dan mahasiswa dari berbagai institusi dalam dan luar negeri untuk mempresentasikan riset terbaru di bidang <em>smart computing</em>, <em>Internet of Things</em> (IoT), dan <em>machine learning</em>.</p>
+
+            <table class="info-table">
+              <tr><td>Konferensi</td><td>SIML International Conference 2026</td></tr>
+              <tr><td>Penyelenggara</td><td>Universitas Muhammadiyah Surakarta (tuan rumah), disponsori teknis oleh IEEE</td></tr>
+              <tr><td>Lokasi</td><td>Edutorium UMS, Surakarta, Jawa Tengah</td></tr>
+              <tr><td>Peserta</td><td>Markus Adytama Wisnumaya Nugraha Jati &amp; Falda Nurrayan Alvis Prabowo</td></tr>
+              <tr><td>Program Studi</td><td>Teknologi Rekayasa Instrumentasi dan Kontrol, Departemen Teknik Elektro dan Informatika, SV UGM</td></tr>
+              <tr><td>Dosen Pembimbing</td><td>Dr. Ir. Fahmizal, S.T., M.Sc., IPM.</td></tr>
+            </table>
+
+            <p>Pada kesempatan tersebut, kedua mahasiswa mempresentasikan dua judul karya ilmiah hasil karya mereka di bidang sistem kendali dan otomasi level air.</p>
+
+            <div class="paper-box">
+              <span class="label">Paper 01</span>
+              <p class="title">&ldquo;Low-Cost Haiwell SCADA for Controlling Water Level System&rdquo;</p>
+              <p>Membahas rancangan sistem <em>Supervisory Control and Data Acquisition</em> (SCADA) berbasis platform Haiwell sebagai solusi pemantauan dan pengendalian level air dengan biaya implementasi yang lebih terjangkau.</p>
+            </div>
+
+            <div class="paper-box">
+              <span class="label">Paper 02</span>
+              <p class="title">&ldquo;Low-Cost PID Analog for Controlling Water Level&rdquo;</p>
+              <p>Mengangkat perancangan pengendali <em>Proportional&ndash;Integral&ndash;Derivative</em> (PID) berbasis analog sebagai alternatif sistem kendali level air yang sederhana, efisien, dan hemat biaya dibandingkan pendekatan digital konvensional.</p>
+            </div>
+
+            <p>Kedua karya tersebut disusun di bawah bimbingan <a href="#">Dr. Ir. Fahmizal, S.T., M.Sc., IPM.</a>, dosen Departemen Teknik Elektro dan Informatika SV UGM. Partisipasi pada konferensi internasional ini diharapkan dapat memperluas wawasan mahasiswa terhadap perkembangan riset sistem kendali dan otomasi di tingkat global, sekaligus menjadi sarana diseminasi hasil karya mahasiswa kepada komunitas akademik yang lebih luas.</p>
+
+            <p>Keikutsertaan dalam SIML International Conference 2026 ini menjadi salah satu bentuk kontribusi nyata mahasiswa SV UGM dalam mengembangkan teknologi instrumentasi dan kontrol yang aplikatif, terjangkau, dan relevan dengan kebutuhan industri maupun masyarakat.</p>
+
+          </div>
+
+          <div class="tagcloud">
+            <span class="tag-title">Tags:</span>
+            <a href="#">SIML 2026</a>
+            <a href="#">SCADA</a>
+            <a href="#">PID Analog</a>
+            <a href="#">IoT</a>
+            <a href="#">TRIK SV UGM</a>
+          </div>
+
+          <ul class="share-box">
+            <li><a href="#" title="Bagikan ke Facebook">f</a></li>
+            <li><a href="#" title="Bagikan ke Twitter">x</a></li>
+            <li><a href="#" title="Bagikan ke WhatsApp">w</a></li>
+          </ul>
+        </article>
+
+      </div><!-- /#content -->
+
+      <div id="sidebar">
+
+        <div class="widget">
+          <div class="widget-header"><h2>Tentang Konferensi</h2></div>
+          <div class="org-card">
+            <div><span class="org-name">SIML 2026</span></div>
+            <div>International Conference on Smart Computing, IoT, and Machine Learning</div>
+            <div>Edutorium UMS, Surakarta, Indonesia</div>
+            <div>Disponsori teknis oleh IEEE</div>
+          </div>
+        </div>
+
+        <div class="widget">
+          <div class="widget-header"><h2>Berita Terkait</h2></div>
+          <ul class="post-list">
+            <li><a href="#">Pemetaan Posisi Wheel Mobile Robot dengan SLAM menggunakan RGBD Kamera Kinect</a></li>
+            <li><a href="#">Inovasi RGBD SLAM: Sinergi Pendidikan Berkualitas dan Penguatan Industri Robotika Nasional</a></li>
+            <li><a href="#">Simulasi Robot Line Follower dengan GUI MATLAB</a></li>
+            <li><a href="#">Rancang Bangun Flight Controller UAV Berbiaya Rendah menggunakan STM32F411 dan GY-87</a></li>
+          </ul>
+        </div>
+
+      </div><!-- /#sidebar -->
+
+    </div><!-- /.row -->
+  </div><!-- /#body -->
+
+  <footer id="footer">
+    <div class="footer-body">
+      <div class="inner">
+        <div class="footer-brand" style="flex:0 0 260px;">
+          <img src="https://otomasi.sv.ugm.ac.id/wp-content/themes/ugm-theme-dti/assets/images/ugm_logo.png" alt="Universitas Gadjah Mada">
+          <p>Departemen Teknik Elektro dan Informatika, Sekolah Vokasi, Universitas Gadjah Mada<br>
+          Jl. Grafika No. 2 Kampus UGM, Yogyakarta 55281</p>
+          <p>Penanggung Jawab: Dr. Ir. Fahmizal, S.T., M.Sc., IPM</p>
+        </div>
+        <div style="flex:1 1 0;">
+          <p><strong>Program Studi Teknologi Rekayasa Instrumentasi dan Kontrol</strong></p>
+          <p>Liputan kegiatan akademik mahasiswa dan dosen Departemen Teknik Elektro dan Informatika, Sekolah Vokasi UGM, dalam forum-forum ilmiah nasional dan internasional.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="inner">
+        <span>&copy; Sekolah Vokasi Universitas Gadjah Mada</span>
+        <a href="#">KEBIJAKAN PRIVASI/PRIVACY POLICY</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
